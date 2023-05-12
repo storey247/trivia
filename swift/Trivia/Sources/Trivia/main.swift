@@ -7,14 +7,15 @@
 //
 
 import Foundation
+import TriviaCore
 
 var notAWinner: Bool
 
 let aGame = Game()
 
-aGame.add("Chet")
-aGame.add("Pat")
-aGame.add("Sue")
+_ = aGame.add(playerName: "Chet")
+_ = aGame.add(playerName: "Pat")
+_ = aGame.add(playerName: "Sue")
 
 repeat {
     
@@ -25,7 +26,5 @@ repeat {
     } else {
         notAWinner = aGame.wasCorrectlyAnswered()
     }
-    
-    
-    
+
 } while (notAWinner)
